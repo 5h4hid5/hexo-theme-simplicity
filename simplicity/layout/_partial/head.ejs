@@ -12,10 +12,11 @@
   <%- css('css/app.css') %>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-  <title><%= config.title %> <% if(page.title) { %> <%= page.title %> <% } else { %> | নীড়পাতা <% } %></title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+  <title><%= config.title %> <% if(page.title) { %> | <%= page.title %> <% } else if (page.archive) { %> | সংগ্রহশালা <% } else if (page.category) { %> | <%= page.category %> <% } else { %> | নীড়পাতা <% } %> </title>
 
   <!-- Google Analytics -->
   <%- partial('google-analytic') %>
+  <%- partial('share-this') %>
 
 </head>
